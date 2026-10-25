@@ -377,8 +377,9 @@ export default function HandoutReader() {
 
           {/* TOPIC EXPLORER AND READING CONTENT */}
           {content && (
-            <HandoutExplorer
+           <HandoutExplorer
               key={content.extractedAt}
+              handoutId={handout.id}
               content={content}
               isPdf={isPdf}
             />

@@ -280,7 +280,9 @@ function Library() {
       "rw",
       db.handouts,
       db.handoutContents,
+      db.topicOutlines,
       async () => {
+        await db.topicOutlines.delete(item.id);
         await db.handoutContents.delete(item.id);
         await db.handouts.delete(item.id);
       },
